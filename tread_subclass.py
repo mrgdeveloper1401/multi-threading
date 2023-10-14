@@ -1,11 +1,8 @@
-from collections.abc import Callable, Iterable, Mapping
 from threading import Thread
 from time import perf_counter, sleep
-from typing import Any
 
 
 start = perf_counter()
-
 def show(name, delay):
     print(f'Hello {name}')
     sleep(delay)

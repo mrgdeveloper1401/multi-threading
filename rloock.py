@@ -10,14 +10,12 @@ def add():
         substract()
         for _ in range(1000000):
             num += 1
-    # locks.release()
         
 def substract():
     global num
     with locks:
         for _ in range(1000000):
             num -= 1
-    # locks.release()
         
 def both():
     substract()

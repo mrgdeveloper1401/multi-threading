@@ -4,12 +4,13 @@ from time import sleep
 
 num = 0
 # locks = Lock()
-# locks = Semaphore(value=2)
+# locks = Semaphore(value=3)
 locks = BoundedSemaphore(value=2)
 
 def add():
     global num
     locks.acquire()
+    # print(current_thread().ident)
     print(current_thread().getName())
     sleep(2)
     num += 1
