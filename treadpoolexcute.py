@@ -10,7 +10,7 @@ def show(name):
     print(f'end {name}')
 
 
-with ThreadPoolExecutor(max_workers=3) as executor:
+with ThreadPoolExecutor() as executor:
     name = ['one', 'two', 'three', 'four', 'five', 'six']
     executor.map(show, name)
     
